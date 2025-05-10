@@ -1,0 +1,12 @@
+/* Font and Tailwind Import */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
+
+/* Styles Customization */
+@theme {
+	--font-base: "Jost", Tahoma, sans-serif;
+	--color-light: #f6f7fc;
+	--color-dark: #16171c;
+	--color-primary-light: #3641ff;
+	--color-primary-dark: #1967d2;
+}
