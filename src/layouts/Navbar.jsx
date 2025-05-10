@@ -50,8 +50,8 @@ const Navbar = () => {
 						className="w-11 md:w-14 lg:w-11 2xl:w-14"
 					/>
 					<h3 className="text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl font-bold tracking-wide">
-						<span className="text-primary-light">F</span>ledge
-						<span className="text-primary-dark">J</span>obs
+						<span className="text-primary">F</span>ledge
+						<span className="text-primary">J</span>obs
 					</h3>
 				</div>
 			</Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
 				<NavLink to="/login">
 					<button
 						type="button"
-						className="px-5 lg:px-6 py-3 rounded-xl text-lg 2xl:text-xl font-medium bg-primary-light text-light hover:drop-shadow-[0_0_6px_var(--color-primary-light)] active:drop-shadow-none transition-[filter] duration-200 cursor-pointer"
+						className="px-5 lg:px-6 py-3 rounded-xl text-lg 2xl:text-xl font-medium bg-primary text-light hover:drop-shadow-[0_0_6px_var(--color-primary)] active:drop-shadow-none transition-[filter] duration-200 cursor-pointer"
 					>
 						Login
 					</button>
@@ -91,7 +91,7 @@ const Navbar = () => {
 				<NavLink to="/signup">
 					<button
 						type="button"
-						className="px-5 lg:px-6 py-3 rounded-xl text-lg 2xl:text-xl font-medium bg-primary-dark text-light hover:drop-shadow-[0_0_6px_var(--color-primary-dark)] active:drop-shadow-none transition-[filter] duration-200 cursor-pointer"
+						className="px-5 lg:px-6 py-3 rounded-xl text-lg 2xl:text-xl font-medium bg-primary text-light hover:drop-shadow-[0_0_6px_var(--color-primary)] active:drop-shadow-none transition-[filter] duration-200 cursor-pointer"
 					>
 						Sign Up
 					</button>
@@ -106,7 +106,7 @@ const Navlink = ({ to = "/", children }) => {
 		<li>
 			<NavLink
 				to={to}
-				className="px-2 py-1 rounded-lg hover:text-primary-light"
+				className="px-2 py-1 rounded-lg hover:text-primary"
 			>
 				{children}
 			</NavLink>
