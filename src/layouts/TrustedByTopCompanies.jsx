@@ -2,7 +2,7 @@ import { HeartHandshakeIcon } from "lucide-react";
 import Brandfetch from "../assets/brandfetch.png";
 import Envato from "../assets/envato.png";
 import Github from "../assets/github.png";
-// import InteractiveCares from "../assets/interactive-cares.png";
+import InteractiveCares from "../assets/interactive-cares.png";
 import SSLCommerz from "../assets/sslcommerz.png";
 import TailwindCSS from "../assets/tailwindcss.png";
 import Upwork from "../assets/upwork.png";
@@ -65,7 +65,7 @@ const TrustedByTopCompanies = () => {
 						key={index}
 						src={company.image}
 						width={company.width}
-						className="grayscale-100 hover:grayscale-0 cursor-pointer transition-[filter] duration-100"
+						className="contrast-50 hover:contrast-100 cursor-pointer transition-[filter] duration-100"
 					/>
 				))}
 			</div>
