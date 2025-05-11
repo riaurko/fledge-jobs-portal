@@ -1,4 +1,5 @@
 import Hero from '../layouts/Hero';
+import JobCategories from '../layouts/JobCategories';
 import TrustedByTopCompanies from '../layouts/TrustedByTopCompanies';
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <main>
             <Hero />
             <TrustedByTopCompanies />
+            <JobCategories />
         </main>
     );
 };

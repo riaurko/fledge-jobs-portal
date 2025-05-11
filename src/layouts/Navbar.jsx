@@ -6,11 +6,11 @@ import { useState } from "react";
 const Navbar = () => {
 	const [showDropdown, setShowDropdown] = useState(false);
 	return (
-		<nav className="px-6 md:px-20 lg:px-32 2xl:px-72 py-4 flex gap-x-12 md:gap-0 justify-center md:justify-between items-center">
+		<nav className="px-6 md:px-20 lg:px-32 2xl:px-60 py-4 flex gap-x-12 md:gap-0 justify-center md:justify-between items-center">
 			{/* Dropdown Links | Appears on Mobile and Tablet */}
 			<div
 				id="dropdown-menu"
-				className="relative block md:hidden"
+				className="relative block lg:hidden"
 			>
 				<LayersIcon
 					size={32}
@@ -19,21 +19,66 @@ const Navbar = () => {
 				/>
 				<ul
 					className={`${
-						showDropdown ? "block" : "hidden"
-					} absolute top-10 -left-16 p-3 space-y-2 bg-zinc-200 rounded-xl w-max cursor-auto`}
+						showDropdown ? "flex flex-col" : "hidden"
+					} absolute top-10 -left-16 p-3 bg-slate-200 rounded-xl w-max cursor-auto`}
 				>
-					<Navlink to="/">Home</Navlink>
-					<Navlink to="/jobs-grid">Find Opportunities</Navlink>
+					<a
+						href="/"
+						className="px-2 py-1 rounded hover:text-primary"
+					>
+						Home
+					</a>
+					<a
+						href="/jobs-grid"
+						className="px-2 py-1 rounded hover:text-primary"
+					>
+						Find Opportunities
+					</a>
 					<li className="relative group cursor-pointer px-2 py-1">
-						On This Page →
-						<ul className="hidden group-hover:block absolute top-0 left-36 p-3 space-y-2 bg-zinc-200 rounded-xl w-max cursor-auto">
-							<Navlink to="/#job-categories">Job Categories</Navlink>
-							<Navlink to="/#top-opportunities">Top Opportunities</Navlink>
-							<Navlink to="/#testimonials">What Our Users Say</Navlink>
-							<Navlink to="/#how-it-works">How It Works</Navlink>
-							<Navlink to="/#faq">Frequently Asked Questions</Navlink>
-							<Navlink to="/#recent-blogs">Recent Blogs</Navlink>
-							<Navlink to="/#call-to-action">Get Started</Navlink>
+						On Home Page →
+						<ul className="hidden group-hover:flex flex-col absolute top-0 left-36 p-3 bg-slate-200 rounded-xl w-max cursor-auto">
+							<a
+								href="#job-categories"
+								className="px-2 py-1 rounded hover:text-primary"
+							>
+								Job Categories
+							</a>
+							<a
+								href="#top-opportunities"
+								className="px-2 py-1 rounded hover:text-primary"
+							>
+								Top Opportunities
+							</a>
+							<a
+								href="#testimonials"
+								className="px-2 py-1 rounded hover:text-primary"
+							>
+								What Our Users Say
+							</a>
+							<a
+								href="#how-it-works"
+								className="px-2 py-1 rounded hover:text-primary"
+							>
+								How It Works
+							</a>
+							<a
+								href="#faq"
+								className="px-2 py-1 rounded hover:text-primary"
+							>
+								Frequently Asked Questions
+							</a>
+							<a
+								href="#recent-blogs"
+								className="px-2 py-1 rounded hover:text-primary"
+							>
+								Recent Blogs
+							</a>
+							<a
+								href="#call-to-action"
+								className="px-2 py-1 rounded hover:text-primary"
+							>
+								Get Started
+							</a>
 						</ul>
 					</li>
 				</ul>
@@ -60,18 +105,63 @@ const Navbar = () => {
 				id="nav-links"
 				className="hidden lg:flex items-center gap-x-4 2xl:text-lg font-medium"
 			>
-				<Navlink to="/">Home</Navlink>
-				<Navlink to="/jobs-grid">Find Opportunities</Navlink>
+				<NavLink
+					to="/"
+					className="px-2 py-1 rounded hover:text-primary"
+				>
+					Home
+				</NavLink>
+				<NavLink
+					to="/jobs-grid"
+					className="px-2 py-1 rounded hover:text-primary"
+				>
+					Find Opportunities
+				</NavLink>
 				<li className="relative group cursor-pointer px-2 py-1">
-					On This Page ▼
-					<ul className="hidden group-hover:block absolute top-8 p-3 space-y-2 bg-zinc-200 rounded-xl w-max cursor-auto">
-						<Navlink to="/#job-categories">Job Categories</Navlink>
-						<Navlink to="/#top-opportunities">Top Opportunities</Navlink>
-						<Navlink to="/#testimonials">What Our Users Say</Navlink>
-						<Navlink to="/#how-it-works">How It Works</Navlink>
-						<Navlink to="/#faq">Frequently Asked Questions</Navlink>
-						<Navlink to="/#recent-blogs">Recent Blogs</Navlink>
-						<Navlink to="/#call-to-action">Get Started</Navlink>
+					On Home Page ▼
+					<ul className="hidden group-hover:flex flex-col absolute top-8 p-3 bg-slate-200 rounded-xl w-max cursor-auto">
+						<a
+							href="#job-categories"
+							className="px-2 py-1 rounded hover:text-primary"
+						>
+							Job Categories
+						</a>
+						<a
+							href="#top-opportunities"
+							className="px-2 py-1 rounded hover:text-primary"
+						>
+							Top Opportunities
+						</a>
+						<a
+							href="#testimonials"
+							className="px-2 py-1 rounded hover:text-primary"
+						>
+							What Our Users Say
+						</a>
+						<a
+							href="#how-it-works"
+							className="px-2 py-1 rounded hover:text-primary"
+						>
+							How It Works
+						</a>
+						<a
+							href="#faq"
+							className="px-2 py-1 rounded hover:text-primary"
+						>
+							Frequently Asked Questions
+						</a>
+						<a
+							href="#recent-blogs"
+							className="px-2 py-1 rounded hover:text-primary"
+						>
+							Recent Blogs
+						</a>
+						<a
+							href="#call-to-action"
+							className="px-2 py-1 rounded hover:text-primary"
+						>
+							Get Started
+						</a>
 					</ul>
 				</li>
 			</ul>
@@ -106,7 +196,7 @@ const Navlink = ({ to = "/", children }) => {
 		<li>
 			<NavLink
 				to={to}
-				className="px-2 py-1 rounded-lg hover:text-primary"
+				className="px-2 py-1 rounded hover:text-primary"
 			>
 				{children}
 			</NavLink>
