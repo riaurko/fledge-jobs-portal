@@ -1,3 +1,4 @@
+import CallToAction from '../layouts/CallToAction';
 import Hero from '../layouts/Hero';
 import HowItWorks from '../layouts/HowItWorks/HowItWorks';
 import JobCategories from '../layouts/JobCategories';
@@ -14,6 +15,7 @@ const Home = () => {
             <Testimonials />
             <Stats />
             <HowItWorks />
+            <CallToAction />
         </main>
     );
 };
