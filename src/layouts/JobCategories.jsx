@@ -97,16 +97,19 @@ const JobCategories = () => {
 			id="job-categories"
 			className="mt-24 px-60 space-y-12"
 		>
+			{/* Section Header */}
 			<div className="flex items-center justify-center gap-x-4">
 				<TagIcon
 					size={40}
 					fill="dodgerblue"
-					strokeWidth={1.5}
+					strokeWidth={1.25}
+					className="motion-safe:animate-bounce"
 				/>
 				<h2 className="text-4xl font-bold">
 					Explore Job <span className="text-primary">Categories</span>
 				</h2>
 			</div>
+			{/* Categories displaying in Grid layout */}
 			<div
 				id="categories-grid"
 				className="grid grid-cols-3 gap-6"

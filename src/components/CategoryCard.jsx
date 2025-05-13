@@ -7,6 +7,7 @@ const CategoryCard = ({ category, roundedIconBox = false, setRoundedIconBox }) =
 			key={category.name}
 			className={`p-8 bg-slate-200 border border-slate-300 ${category.cardClasses} rounded-2xl transition-colors flex flex-col items-center gap-y-5`}
 		>
+			{/* Tooltip */}
 			<Tooltip
 				anchorSelect=".switch-shape"
 				offset={16}
@@ -17,6 +18,7 @@ const CategoryCard = ({ category, roundedIconBox = false, setRoundedIconBox }) =
 			>
 				Click to change Shape
 			</Tooltip>
+			{/* Category icon box */}
 			<div
 				className={`w-fit ${category.iconClasses} p-4 ${
 					roundedIconBox ? "rounded-full" : "rounded-lg"
@@ -25,6 +27,7 @@ const CategoryCard = ({ category, roundedIconBox = false, setRoundedIconBox }) =
 			>
 				<a className="switch-shape">{category.icon}</a>
 			</div>
+			{/* Category content */}
 			<div className="text-center space-y-2">
 				<h4 className="text-2xl font-bold">{category.name}</h4>
 				<p className="text-slate-600 font-medium">{category.description}</p>

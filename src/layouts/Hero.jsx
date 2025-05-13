@@ -35,7 +35,7 @@ const Hero = () => {
 					</p>
 					<button
 						type="button"
-						className="mt-8 px-8 py-2 rounded-full bg-primary text-light text-2xl font-medium cursor-pointer"
+						className="mt-8 px-8 py-2 rounded-full bg-primary text-light text-2xl font-medium hover:bg-gradient-to-r hover:from-primary hover:to-indigo-500 active:bg-gradient-to-l cursor-pointer"
 					>
 						Explore
 					</button>

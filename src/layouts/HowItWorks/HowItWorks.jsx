@@ -105,16 +105,19 @@ const HowItWorks = () => {
 			id="how-it-works"
 			className="my-24 px-60 space-y-16"
 		>
+			{/* Section Header */}
 			<div className="flex items-center justify-center gap-x-4">
 				<CogIcon
 					size={40}
 					fill="dodgerblue"
-					strokeWidth={1.5}
+					strokeWidth={1.25}
+					className="motion-safe:animate-spin"
 				/>
 				<h2 className="text-4xl font-bold">
 					How It <span className="text-primary">Works</span>
 				</h2>
 			</div>
+			{/* First row representing Job Seekers guideline */}
 			<StepsDivision
 				description="Build your career with jobs that align with your passion and skills."
 				thumbImage={GetJob}
@@ -122,6 +125,7 @@ const HowItWorks = () => {
 			>
 				Job Seeker
 			</StepsDivision>
+			{/* Second row representing Employers guideline */}
 			<StepsDivision
 				description="Hire talents who will clean-up your work-stress fantastically."
 				thumbImage={FindTalent}
