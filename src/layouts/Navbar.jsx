@@ -3,9 +3,11 @@ import logo from "../assets/logo.png";
 import { LayersIcon } from "lucide-react";
 import { useState } from "react";
 import Headroom from "react-headroom";
+import useAuthContext from "../hooks/useAuthContext";
 
 const Navbar = () => {
 	const [showDropdown, setShowDropdown] = useState(false);
+	const { user } = useAuthContext();
 	return (
 		<Headroom>
 			<nav className="relative top-0 left-0 w-full px-6 md:px-20 lg:px-32 2xl:px-60 py-4 flex gap-x-12 md:gap-0 justify-center md:justify-between items-center bg-gradient-to-r from-light/60 to-light/60 backdrop-blur-lg">
@@ -168,27 +170,45 @@ const Navbar = () => {
 					</li>
 				</ul>
 				{/* Buttons | Positioned Right */}
-				<div
-					id="nav-buttons"
-					className="hidden md:flex items-center gap-x-4"
-				>
-					<NavLink to="/login">
+				{user ? (
+					<div
+						id="nav-buttons"
+						className="hidden md:flex items-center gap-x-6"
+					>
 						<button
 							type="button"
 							className="px-5 lg:px-6 py-3 rounded-xl text-lg 2xl:text-xl font-medium bg-primary text-light hover:bg-gradient-to-r hover:from-primary hover:to-indigo-500 active:bg-gradient-to-l cursor-pointer"
 						>
-							Login
+							Logout
 						</button>
-					</NavLink>
-					<NavLink to="/signup">
-						<button
-							type="button"
-							className="px-5 lg:px-6 py-3 rounded-xl text-lg 2xl:text-xl font-medium bg-primary text-light hover:bg-gradient-to-r hover:from-primary hover:to-indigo-500 active:bg-gradient-to-l duration-200 cursor-pointer"
-						>
-							Sign Up
-						</button>
-					</NavLink>
-				</div>
+						<img
+							src="https://i.pinimg.com/474x/a0/22/80/a02280bc7edd3e553dc5425992aada9d.jpg"
+							className="size-12 rounded-full object-cover object-top cursor-pointer"
+						/>
+					</div>
+				) : (
+					<div
+						id="nav-buttons"
+						className="hidden md:flex items-center gap-x-4"
+					>
+						<NavLink to="/login">
+							<button
+								type="button"
+								className="px-5 lg:px-6 py-3 rounded-xl text-lg 2xl:text-xl font-medium bg-primary text-light hover:bg-gradient-to-r hover:from-primary hover:to-indigo-500 active:bg-gradient-to-l cursor-pointer"
+							>
+								Login
+							</button>
+						</NavLink>
+						<NavLink to="/signup">
+							<button
+								type="button"
+								className="px-5 lg:px-6 py-3 rounded-xl text-lg 2xl:text-xl font-medium bg-primary text-light hover:bg-gradient-to-r hover:from-primary hover:to-indigo-500 active:bg-gradient-to-l duration-200 cursor-pointer"
+							>
+								Sign Up
+							</button>
+						</NavLink>
+					</div>
+				)}
 			</nav>
 		</Headroom>
 	);
