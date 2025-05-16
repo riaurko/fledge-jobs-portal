@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 
 const LoginCard = () => {
 	// loginUser function fetched from AuthContext
-	const { loginUser, loginError, setLoading } = useAuthContext();
+	const { loginUser, errorMessage, setLoading } = useAuthContext();
 	// Navigate hook for navigating to Dashboard after successful Login
 	const navigate = useNavigate();
 	// Hook Form declaration
@@ -93,7 +93,7 @@ const LoginCard = () => {
 				</div>
 			</form>
 			{/* Non-field error */}
-			{loginError ? <p className="text-red-600 mt-4">{loginError.message}</p> : null}
+			{errorMessage ? <p className="text-red-600 mt-4">{errorMessage}</p> : null}
 			{/* Text with Link that redirects to Signup page */}
 			<p className="text-center text-lg font-medium mt-4">
 				Don't have an account?{" "}

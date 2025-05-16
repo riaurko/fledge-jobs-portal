@@ -7,7 +7,7 @@ const useAuth = () => {
 	// Loading state
 	const [loading, setLoading] = useState(true);
 	// State for Login-Error
-	const [loginError, setLoginError] = useState(null);
+	const [errorMessage, setErrorMessage] = useState("");
 	// Get and set the token
 	const getToken = () => {
 		const token = localStorage.getItem("authTokens");
@@ -35,29 +35,37 @@ const useAuth = () => {
 	};
 	// Login user
 	const loginUser = async (userCredentials) => {
-		setLoginError(null);
+		setErrorMessage("");
 		try {
 			const response = await authClient.post("/jwt/create/", userCredentials);
 			setAuthTokens(response.data);
 			localStorage.setItem("authTokens", JSON.stringify(response.data));
 			await fetchUserProfile();
 		} catch (error) {
-			// Set loginError
-			setLoginError({
-				code: error.code,
-				message: error.response?.data?.detail,
-				status: error.response?.status,
-				statusText: error.response?.statusText,
-			});
+			// Set error message
+			setErrorMessage(error.response?.data?.detail);
+		}
+	};
+	// Sign-up user
+	const signUpUser = async (userCredentials) => {
+		setErrorMessage("");
+		try {
+			await authClient.post("/users/", userCredentials);
+		} catch (error) {
+			if (error.response && error.response.data) {
+				const errorMsg = Object.values(error.response.data).flat().join("\n");
+				setErrorMessage(errorMsg);
+			} else setErrorMessage("Operation failed. Please try again.");
 		}
 	};
 	// Provider values
 	const result = {
 		user,
 		loginUser,
+		signUpUser,
 		loading,
 		setLoading,
-		loginError,
+		errorMessage,
 	};
 	return result;
 };
