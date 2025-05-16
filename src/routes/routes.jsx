@@ -3,6 +3,8 @@ import Root from "../pages/Root";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
+import Dashboard from "../pages/Dashboard";
+import PrivateRoute from "../pages/PrivateRoute";
 
 const router = createBrowserRouter([
 	{
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
 			{
 				path: "/signup",
 				Component: SignUp,
+			},
+			{
+				path: "/dashboard",
+				element: (
+					<PrivateRoute>
+						<Dashboard />
+					</PrivateRoute>
+				),
 			},
 		],
 	},
