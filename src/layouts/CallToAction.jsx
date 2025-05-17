@@ -40,7 +40,7 @@ const CallToAction = () => {
 							{
 								name: "Find Opportunities",
 								isAnchor: false,
-								reference: "/jobs-grid",
+								reference: "/jobs",
 							},
 							{
 								name: "Build Resume",
@@ -63,7 +63,7 @@ const CallToAction = () => {
 							{
 								name: "Post Job",
 								isAnchor: false,
-								reference: "/jobs-grid/new",
+								reference: "/jobs/new",
 							},
 							{
 								name: "Track Report",

@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "../pages/PrivateRoute";
+import Categories from "../pages/Categories";
 
 const router = createBrowserRouter([
 	{
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
 						<Dashboard />
 					</PrivateRoute>
 				),
+			},
+			{
+				path: "/categories",
+				Component: Categories,
 			},
 		],
 	},

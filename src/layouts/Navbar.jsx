@@ -26,63 +26,61 @@ const Navbar = () => {
 							showDropdown ? "flex flex-col" : "hidden"
 						} absolute top-10 -left-16 p-3 bg-slate-200 rounded-xl w-max cursor-auto`}
 					>
-						<a
-							href="/"
-							className="px-2 py-1 rounded hover:text-primary"
-						>
-							Home
-						</a>
-						<a
-							href="/jobs-grid"
-							className="px-2 py-1 rounded hover:text-primary"
-						>
-							Find Opportunities
-						</a>
+						<li>
+							<a
+								href="/"
+								className="px-2 py-1 rounded hover:text-primary"
+							>
+								Home
+							</a>
+						</li>
+						<li>
+							<a
+								href="/jobs"
+								className="px-2 py-1 rounded hover:text-primary"
+							>
+								Find Opportunities
+							</a>
+						</li>
 						<li className="relative group cursor-pointer px-2 py-1">
-							On Home Page →
+							Tools →
 							<ul className="hidden group-hover:flex flex-col absolute top-0 left-36 p-3 bg-slate-200 rounded-xl w-max cursor-auto">
-								<a
-									href="#job-categories"
-									className="px-2 py-1 rounded hover:text-primary"
-								>
-									Job Categories
-								</a>
-								<a
-									href="#top-opportunities"
-									className="px-2 py-1 rounded hover:text-primary"
-								>
-									Top Opportunities
-								</a>
-								<a
-									href="#testimonials"
-									className="px-2 py-1 rounded hover:text-primary"
-								>
-									What Our Users Say
-								</a>
-								<a
-									href="#how-it-works"
-									className="px-2 py-1 rounded hover:text-primary"
-								>
-									How It Works
-								</a>
-								<a
-									href="#faq"
-									className="px-2 py-1 rounded hover:text-primary"
-								>
-									Frequently Asked Questions
-								</a>
-								<a
-									href="#recent-blogs"
-									className="px-2 py-1 rounded hover:text-primary"
-								>
-									Recent Blogs
-								</a>
-								<a
-									href="#call-to-action"
-									className="px-2 py-1 rounded hover:text-primary"
-								>
-									Get Started
-								</a>
+								<li className="px-2 py-1">
+									<a
+										href="https://resume.io"
+										target="_blank"
+										className="rounded hover:text-primary"
+									>
+										Build Resume
+									</a>
+								</li>
+								<li className="px-2 py-1">
+									<a
+										href="https://resume.naukri.com/resume-quality-score"
+										target="_blank"
+										className="rounded hover:text-primary"
+									>
+										Resume Checker
+									</a>
+								</li>
+								<li className="px-2 py-1">
+									<a
+										href="https://www.canva.com/s/templates?adj=eyJEIjp7fX0&query=resume+template"
+										target="_blank"
+										className="rounded hover:text-primary"
+									>
+										Resume Templates
+									</a>
+								</li>
+								<li className="px-2 py-1">
+									<a
+										href="https://www.youtube.com/watch?v=0siE31sqz0Q"
+										target="_blank"
+										className="rounded hover:text-primary"
+									>
+										Interview Tips
+									</a>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -109,63 +107,61 @@ const Navbar = () => {
 					id="nav-links"
 					className="hidden lg:flex items-center gap-x-4 2xl:text-lg font-medium"
 				>
-					<NavLink
-						to="/"
-						className="px-2 py-1 rounded hover:text-primary"
-					>
-						Home
-					</NavLink>
-					<NavLink
-						to="/jobs-grid"
-						className="px-2 py-1 rounded hover:text-primary"
-					>
-						Find Opportunities
-					</NavLink>
+					<li>
+						<NavLink
+							to="/"
+							className="px-2 py-1 rounded hover:text-primary"
+						>
+							Home
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							to="/jobs"
+							className="px-2 py-1 rounded hover:text-primary"
+						>
+							Find Opportunities
+						</NavLink>
+					</li>
 					<li className="relative group cursor-pointer px-2 py-1">
-						On Home Page ▼
+						Tools ▼
 						<ul className="hidden group-hover:flex flex-col absolute top-8 p-3 bg-slate-200 rounded-xl w-max cursor-auto">
-							<a
-								href="#job-categories"
-								className="px-2 py-1 rounded hover:text-primary"
-							>
-								Job Categories
-							</a>
-							<a
-								href="#top-opportunities"
-								className="px-2 py-1 rounded hover:text-primary"
-							>
-								Top Opportunities
-							</a>
-							<a
-								href="#testimonials"
-								className="px-2 py-1 rounded hover:text-primary"
-							>
-								What Our Users Say
-							</a>
-							<a
-								href="#how-it-works"
-								className="px-2 py-1 rounded hover:text-primary"
-							>
-								How It Works
-							</a>
-							<a
-								href="#faq"
-								className="px-2 py-1 rounded hover:text-primary"
-							>
-								Frequently Asked Questions
-							</a>
-							<a
-								href="#recent-blogs"
-								className="px-2 py-1 rounded hover:text-primary"
-							>
-								Recent Blogs
-							</a>
-							<a
-								href="#call-to-action"
-								className="px-2 py-1 rounded hover:text-primary"
-							>
-								Get Started
-							</a>
+							<li className="px-2 py-1">
+								<a
+									href="https://resume.io"
+									target="_blank"
+									className="rounded hover:text-primary"
+								>
+									Build Resume
+								</a>
+							</li>
+							<li className="px-2 py-1">
+								<a
+									href="https://resume.naukri.com/resume-quality-score"
+									target="_blank"
+									className="rounded hover:text-primary"
+								>
+									Resume Checker
+								</a>
+							</li>
+							<li className="px-2 py-1">
+								<a
+									href="https://www.canva.com/s/templates?adj=eyJEIjp7fX0&query=resume+template"
+									target="_blank"
+									className="rounded hover:text-primary"
+								>
+									Resume Templates
+								</a>
+							</li>
+							<li className="px-2 py-1">
+								<a
+									href="https://www.youtube.com/watch?v=0siE31sqz0Q"
+									target="_blank"
+									className="rounded hover:text-primary"
+								>
+									Interview Tips
+								</a>
+							</li>
 						</ul>
 					</li>
 				</ul>

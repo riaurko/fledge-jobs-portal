@@ -4,11 +4,11 @@ import { Link } from "react-router";
 
 const Footer = () => {
 	return (
-		<footer className="mt-24 px-60 py-32 bg-dark text-light rounded-t-[8rem] flex flex-col gap-y-20">
+		<footer className="mt-24 px-60 py-24 bg-dark text-light rounded-t-[8rem] flex flex-col gap-y-12">
 			{/* 1st row - Logo, Contact */}
 			<div
 				id="foot-row-1"
-				className="flex justify-around"
+				className="flex justify-between"
 			>
 				{/* Logo and Slogan */}
 				<div
@@ -35,7 +35,7 @@ const Footer = () => {
 				{/* Contact Info */}
 				<div
 					id="foot-contact"
-					className="space-y-4"
+					className="space-y-2"
 				>
 					<h5 className="text-xl font-bold uppercase text-slate-300">Contact</h5>
 					<ul className="space-y-3 text-xl">
@@ -57,18 +57,18 @@ const Footer = () => {
 			{/* 2nd row - Services, Legal, Social */}
 			<div
 				id="foot-row-2"
-				className="flex justify-between"
+				className="grid grid-cols-4"
 			>
 				{/* Services Links */}
 				<div
 					id="foot-services"
-					className="space-y-4"
+					className="space-y-2"
 				>
 					<h5 className="text-xl font-bold uppercase text-slate-300">Services</h5>
 					<ul className="space-y-2 text-lg">
 						<li>
 							<Link
-								to="/jobs-grid"
+								to="/jobs"
 								target="_blank"
 								className="hover:text-blue-500 transition-colors duration-100"
 							>
@@ -77,7 +77,7 @@ const Footer = () => {
 						</li>
 						<li>
 							<Link
-								to="/categories-grid"
+								to="/categories"
 								target="_blank"
 								className="hover:text-blue-500 transition-colors duration-100"
 							>
@@ -98,7 +98,7 @@ const Footer = () => {
 				{/* Legal Links */}
 				<div
 					id="foot-legal"
-					className="space-y-4"
+					className="space-y-2 col-span-2 mx-auto"
 				>
 					<h5 className="text-xl font-bold uppercase text-slate-300">Legal</h5>
 					<ul className="space-y-2 text-lg">
@@ -134,7 +134,7 @@ const Footer = () => {
 				{/* Social Links */}
 				<div
 					id="foot-social"
-					className="space-y-4"
+					className="space-y-2"
 				>
 					<h5 className="text-xl font-bold uppercase text-slate-300">Social</h5>
 					<ul className="flex gap-x-4">
